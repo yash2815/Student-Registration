@@ -1,0 +1,28 @@
+<h1>Student Registration System</h1>
+
+<select [(ngModel)] = "selectedOption">
+  <option value="" disabled selected>Select an option</option>
+  <option value="option1">Add Student</option>
+  <option value="option2">View Student List</option>
+  <option value="option3">Delete Student</option>
+  <option value="option4">Modify Student</option>
+  <option value="option5">View Student</option>
+</select>
+
+
+
+<ng-template [ngIf]="selectedOption=='option1'">
+    <app-addstudent></app-addstudent>
+</ng-template>
+<ng-template [ngIf]="selectedOption=='option2'">
+    <app-allstudents></app-allstudents>
+</ng-template>
+<ng-template [ngIf]="selectedOption=='option3'">
+    <app-deletestudent></app-deletestudent>
+</ng-template>
+<ng-template [ngIf]="selectedOption=='option4'">
+    <app-modifystudent></app-modifystudent>
+</ng-template>
+<ng-template [ngIf]="selectedOption=='option5'">
+    <app-getstudent></app-getstudent>
+</ng-template>

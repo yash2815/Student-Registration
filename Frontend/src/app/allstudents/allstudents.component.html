@@ -1,0 +1,14 @@
+<button type="button" (click)="getAllStudents()">View Student List</button>
+
+<div *ngIf="display; else errormessage">
+    <ul>
+        <h2>Student List</h2>
+        <li *ngFor="let student of students">
+            {{student.rollNo}} -- {{student.name}} -- {{student.age}} -- {{student.address}} -- {{student.mobileNo}}
+        </li>
+    </ul>
+</div>
+
+<ng-template #errormessage>
+    <p>{{ str }}</p>
+</ng-template>

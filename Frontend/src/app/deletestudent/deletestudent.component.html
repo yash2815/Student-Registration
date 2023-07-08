@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Delete Student</h2>
+    <div class="form-group">
+        <label for = "rollNo">Roll Number</label>
+        <input type="number" class="form-control" id="rollNo" name="rollNo"  [(ngModel)] = "rollNo" required> 
+    </div>
+</div>
+
+<button (click)="deleteStudent()">Delete Student</button>
+<p>{{ str }}</p>

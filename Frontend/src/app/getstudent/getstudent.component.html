@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>View Student</h2>
+    <div class="form-group">
+        <label for = "rollNo">Roll Number</label>
+        <input type="number" class="form-control" id="rollNo" name="rollNo"  [(ngModel)] = "rollNo" required> 
+    </div>
+</div>
+
+<button (click)="getStudent()">View Student</button>
+<ul *ngIf="show1">
+    <h2>Student List</h2>
+    <li>
+        <p>{{this.student.rollNo}} -- {{this.student.name}} -- {{this.student.age}} -- {{this.student.address}} -- {{this.student.mobileNo}}</p>
+    </li>
+</ul>
+<div *ngIf="show2">
+    <p>{{ str }}</p>
+</div>
